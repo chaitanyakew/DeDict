@@ -57,10 +57,40 @@ def export_table_to_csv(table):
 
     return len(rows)
 
+def export_nouns_to_csv():
+
+    conn = sqlite3.connect(ORACLE_DB)
+    cur = conn.cursor()
+
+    cur.execute("SELECT word, article, plural, meaning FROM nouns")
+    rows = cur.fetchall()
+    conn.close()
+
+    csv_file = CSV_FILES["nouns"]
+    fieldnames = ["article", "singular", "plural", "meaning"]
+
+    with open(csv_file, "w", newline="", encoding="utf-8-sig") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for row in rows:
+            word, article, plural, meaning = row
+
+            writer.writerow({
+                "article": article,
+                "singular": word,
+                "plural": f"die {plural}" if plural else "",
+                "meaning": meaning
+            })
+
+    return len(rows)
+
 
 def main():
 
-    for table in ["nouns", "verbs", "adjectives", "adverbs"]:
+    export_nouns_to_csv()
+    print(f"Nouns csv created.")
+    for table in ["verbs", "adjectives", "adverbs"]:
         count = export_table_to_csv(table)
         print(f"{table.capitalize()} csv created.")
 
