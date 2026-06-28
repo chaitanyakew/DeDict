@@ -62,7 +62,7 @@ def main():
 
     for table in ["nouns", "verbs", "adjectives", "adverbs"]:
         count = export_table_to_csv(table)
-        print(f"{table.capitalize()} exported: {count}")
+        print(f"{table.capitalize()} csv created.")
 
 
 if __name__ == "__main__":
