@@ -19,23 +19,23 @@ Implemented:
 ## Project Structure
 
 ```text
-create_adjectives_masterdb.py
-create_adverbs_masterdb.py
+masterdb_helper_adjectives.py
+masterdb_helper_adverbs.py
 create_all_master_dbs.py
 create_csvs_from_oracle.py
-create_nouns_masterdb.py
+masterdb_helper_nouns.py
 create_oracledb_schema.py
-create_verbs_masterdb.py
+masterdb_helper_verbs.py
 ```
 
 ### Script Overview
 
 | Script                          | Purpose                             |
 | ------------------------------- | ----------------------------------- |
-| `create_adjectives_masterdb.py` | Build adjective master database     |
-| `create_adverbs_masterdb.py`    | Build adverb master database        |
-| `create_nouns_masterdb.py`      | Build noun master database          |
-| `create_verbs_masterdb.py`      | Build verb master database          |
+| `masterdb_helper_adjectives.py` | Build adjective master database     |
+| `masterdb_helper_adverbs.py`    | Build adverb master database        |
+| `masterdb_helper_nouns.py`      | Build noun master database          |
+| `masterdb_helper_verbs.py`      | Build verb master database          |
 | `create_all_master_dbs.py`      | Generate all master databases       |
 | `create_oracledb_schema.py`     | Create and populate OracleDB schema |
 | `create_csvs_from_oracle.py`    | Export data from OracleDB to CSV    |
