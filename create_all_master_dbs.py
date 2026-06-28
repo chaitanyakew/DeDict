@@ -1,7 +1,7 @@
-from create_nouns_masterdb import create_database as create_nouns
-from create_verbs_masterdb import create_database as create_verbs
-from create_adjectives_masterdb import create_database as create_adjectives
-from create_adverbs_masterdb import create_database as create_adverbs
+from masterdb_helper_nouns import create_database as create_nouns
+from masterdb_helper_verbs import create_database as create_verbs
+from masterdb_helper_adjectives_ import create_database as create_adjectives
+from masterdb_helper_adverbs import create_database as create_adverbs
 
 def main():
     print("Creating noun database...")
