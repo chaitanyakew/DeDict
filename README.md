@@ -1,4 +1,4 @@
-# DeDict: Your Own Oracle
+# DeDict: Your Own Oracle (WiP)
 
 ## Purpose
 
